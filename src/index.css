@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 5000px;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Fonts/Poppins/poppins-Black.ttf");
+  font-weight: 900;
+}
