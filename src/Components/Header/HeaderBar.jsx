@@ -86,7 +86,7 @@ function HeaderBar() {
         isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       } ${
         isBeyondScreen
-          ? "!bg-[#535252] !flex !justify-between !items-center"
+          ? "!bg-[#212741] !flex !justify-between !items-center"
           : "!bg-transparent"
       }`}
       data-aos={isVisible ? "fade-down" : "fade-up"}

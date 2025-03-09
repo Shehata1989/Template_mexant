@@ -8,3 +8,7 @@
   background-color: #43ba7f !important;
   opacity: 1;
 }
+
+.swiper-pagination {
+  bottom: 30px !important;
+}

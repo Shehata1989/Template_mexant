@@ -1,7 +1,7 @@
 
 const Container = ({children}) => {
   return (
-    <div className="container">{children}</div>
+    <Container maxWidth="xl" >{children}</Container>
   )
 }
 

@@ -8,9 +8,9 @@
 
 html,
 body {
-  overflow-x: hidden;
-  width: 100vw;
+  min-height: 3000px;
 }
+
 
 @font-face {
   font-family: "Poppins";

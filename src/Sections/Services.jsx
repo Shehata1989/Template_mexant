@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export const Services = () => {
   return (
-    <div className="services !mt-20">
+    <div className="services !mt-10 md:!mt-20">
       <Grid container spacing={2}>
         {ServicesData.map((item, index) => (
           <Grid key={index} size={{ xs: 12, md: 6 }}>

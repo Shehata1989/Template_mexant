@@ -4,14 +4,14 @@ import Slide2 from "../assets/images/slide-02.jpg";
 import Slide3 from "../assets/images/slide-03.jpg";
 
 const typographyStyles = {
-  fontSize: { xs: 20, md: 50 },
+  fontSize: { xs: 20, sm: 40, md: 50 },
   fontWeight: 900,
 };
 
 const dividerStyles = {
-  ml: 0,
+  mx: { xs: "auto", md: 0 },
   my: { xs: 2, md: 4 },
-  maxWidth: "80px",
+  maxWidth: { xs: 150 },
   borderColor: "text.primary",
   borderWidth: 4,
   borderRadius: 2,
@@ -30,16 +30,16 @@ export const sliderData = [
     title: renderTitle(
       <>
         <Typography sx={typographyStyles}>
-        Get{" "}
-        <Typography component="span" color="secondary" sx={typographyStyles}>
-          ready
-        </Typography>{" "}
-        for your business
-        <br />
-        &amp; upgrade{" "}
-        <Typography component="span" color="secondary" sx={typographyStyles}>
-          all aspects
-        </Typography>
+          Get{" "}
+          <Typography component="span" color="secondary" sx={typographyStyles}>
+            ready
+          </Typography>{" "}
+          for your business
+          <br />
+          &amp; upgrade{" "}
+          <Typography component="span" color="secondary" sx={typographyStyles}>
+            all aspects
+          </Typography>
         </Typography>
       </>
     ),

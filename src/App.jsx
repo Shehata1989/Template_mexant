@@ -7,10 +7,9 @@ import { Container } from "@mui/material";
 import Hero from "./Sections/Hero";
 import "aos/dist/aos.css";
 import { Services } from "./Sections/Services";
-
+import SimpleCta from "./Sections/SimpleCta";
 
 function App() {
-
   const theme = createTheme({
     palette: {
       primary: {
@@ -39,6 +38,7 @@ function App() {
       h6: {
         fontSize: "1.3rem", // حجم العنوان الصغير
         fontWeight: 700, // الوزن الافتراضي
+        lineHeight: 1.2,
       },
       body1: {
         fontSize: "1rem", // النصوص العادية
@@ -57,6 +57,7 @@ function App() {
           <Container>
             <Services />
           </Container>
+          <SimpleCta />
           {/* <Footer /> */}
         </Router>
       </ThemeProvider>
