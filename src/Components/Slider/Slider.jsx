@@ -65,10 +65,10 @@ const SliderApp = () => {
           prevEl: ".custom-prev",
         }}
         pagination={{ clickable: true, dynamicBullets: true }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: true,
+        }}
         onSlideChange={handleSlideChange}
       >
         {sliderData.map((slide, index) => (
