@@ -1,0 +1,14 @@
+.swiper-pagination-bullet {
+  background-color: gray !important;
+  opacity: 0.5;
+}
+
+/* لون النقطة النشطة */
+.swiper-pagination-bullet-active {
+  background-color: #ff511a !important;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 30px !important;
+}

@@ -6,6 +6,7 @@ import {
   Box,
   Stack,
   Container,
+  Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
@@ -86,6 +87,22 @@ const FormsCalculator = () => {
                 padding: 2,
               }}
             >
+              <Typography
+                variant="h6"
+                sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }}
+                className="title !uppercase !text-center"
+                color="secondary"
+              >
+                Your Freedom
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ fontSize: { xs: 20, sm: 36 }, fontWeight: 700 }}
+                className="title !mb-7  !text-center"
+                color="text.primary"
+              >
+                Get a Financial Plan
+              </Typography>
               <Stack direction="row" gap={2}>
                 {/* Name Field */}
                 <Controller

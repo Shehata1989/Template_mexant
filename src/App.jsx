@@ -10,6 +10,7 @@ import { Services } from "./Sections/Services";
 import SimpleCta from "./Sections/SimpleCta";
 import Naccs from "./Sections/Naccs";
 import FormsCalculator from "./Sections/FormsCalculator";
+import Testimonials from "./Sections/Testimonials";
 
 function App() {
   const theme = createTheme({
@@ -61,6 +62,7 @@ function App() {
           <SimpleCta />
           <Naccs />
           <FormsCalculator />
+          <Testimonials />
           {/* <Footer /> */}
         </Router>
       </ThemeProvider>
