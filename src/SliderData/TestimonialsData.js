@@ -8,7 +8,7 @@ export const TestimonialsData = [
       "“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”",
     title: "CEO of Mexant",
     image: PersonImage,
-    icon: "John Doe",
+    icon: "",
   },
   {
     name: "Andrew Garfield",
