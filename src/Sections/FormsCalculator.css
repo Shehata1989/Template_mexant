@@ -1,0 +1,34 @@
+/* استهداف Autofill في Webkit (Chrome, Safari, Edge) */
+.forms-calculator .MuiOutlinedInput-root input:-webkit-autofill,
+.forms-calculator .MuiOutlinedInput-root input:-webkit-autofill:hover,
+.forms-calculator .MuiOutlinedInput-root input:-webkit-autofill:focus,
+.forms-calculator .MuiOutlinedInput-root input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgb(0, 0, 0, 0) inset !important;
+  box-shadow: 0 0 0 1000px rgb(0, 0, 0, 0) inset !important;
+  background-color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: #ffffff !important; /* تغيير لون النص إلى أبيض */
+  color: #ffffff !important; /* لدعم المتصفحات الأخرى */
+}
+
+/* استهداف Autofill في Firefox */
+.forms-calculator .MuiOutlinedInput-root input:-moz-autofill {
+  background-color: transparent !important;
+  filter: none !important;
+  color: #ffffff !important; /* تغيير لون النص إلى أبيض */
+}
+
+/* التأكد من أن الخلفية شفافة في كل الحالات */
+.forms-calculator .MuiOutlinedInput-root {
+  background-color: transparent !important;
+  color: #ffffff !important; /* تغيير لون النص إلى أبيض */
+}
+
+
+@media (max-width: 930px) {
+  .hidden-930 {
+    display: none !important;
+  }
+}
+
