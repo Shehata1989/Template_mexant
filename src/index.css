@@ -13,6 +13,12 @@ body {
 
 @font-face {
   font-family: "Poppins";
+  src: url("Fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
   src: url("Fonts/Poppins/Poppins-SemiBold.ttf");
   font-weight: 700;
 }
@@ -21,4 +27,10 @@ body {
   font-family: "Poppins";
   src: url("Fonts/Poppins/poppins-Black.ttf");
   font-weight: 900;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("Fonts/Poppins/Poppins-Italic.ttf");
+  font-weight: 400;
 }
