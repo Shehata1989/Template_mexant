@@ -177,7 +177,7 @@ const Testimonials = () => {
             </div>
           </Swiper>
         </Box>
-        <div className="custom-pagination"></div>
+        <div className="custom-pagination !mx-auto !mt-10"></div>
       </Container>
     </div>
   );
