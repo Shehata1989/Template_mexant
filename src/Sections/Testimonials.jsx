@@ -1,10 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { useCallback } from "react";
-import { useState } from "react";
-
+import { useCallback, useState } from "react";
 import { TestimonialsData } from "../SliderData/TestimonialsData";
-
-
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,7 +21,7 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials !mt-15 md:!mt-30">
-      <Container className="!h-[550px]">
+      <Container className="!h-[550px] relative">
         <Typography
           variant="h6"
           sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }}
@@ -42,9 +38,9 @@ const Testimonials = () => {
         >
           What They Say
         </Typography>
-        <Box component={"div"}>
+        <Box component={"div"} sx={{ position: "relative" }}>
           <Swiper
-            className="testimonials-swiper !relative"
+            className="testimonials-swiper"
             sx={{ boxShadow: 3, borderRadius: "16px" }}
             modules={[Navigation, Pagination, Autoplay]}
             grabCursor={true}
@@ -58,6 +54,7 @@ const Testimonials = () => {
               clickable: true,
               dynamicBullets: true,
               el: ".custom-pagination",
+              type: "bullets",
             }}
             autoplay={{
               delay: 3000,
@@ -67,7 +64,6 @@ const Testimonials = () => {
           >
             {TestimonialsData.map((slide, index) => (
               <SwiperSlide key={`${index}-${new Date().getTime()}`}>
-                {/* المحتوى */}
                 <Container
                   maxWidth="md"
                   fixed
@@ -82,24 +78,22 @@ const Testimonials = () => {
                     gap={{ xs: 4, md: 2 }}
                     className="slider-content text-center md:text-left"
                   >
-                    <Box component={"div"} className="md:max-w-[50%] flex flex-col gap-5 justify-center items-center md:block">
-                      {/* عنوان السلايد */}
+                    <Box
+                      component={"div"}
+                      className="md:max-w-[50%] flex flex-col gap-5 justify-center items-center md:block"
+                    >
                       <Typography
                         variant="h1"
                         color="primary"
                         sx={{
                           fontSize: { xs: 45, sm: 90 },
                           marginBottom: { xs: 0, sm: 4 },
-
                         }}
                       >
                         {slide?.icon}
                       </Typography>
-                      {/* وصف السلايد */}
                       <Typography
                         variant="h1"
-                        data-aos="flip-right"
-                        data-aos-delay="400"
                         color="text.secondary"
                         sx={{
                           fontSize: { xs: 12, sm: 14 },
@@ -113,10 +107,7 @@ const Testimonials = () => {
                       </Typography>
                       <Typography
                         variant="h1"
-                        data-aos="flip-right"
-                        data-aos-delay="400"
                         color="text.secondary"
-                        className="w-[50%]"
                         sx={{
                           fontSize: { xs: 12.5, sm: 25 },
                           textAlign: { xs: "center", md: "left" },
@@ -127,11 +118,7 @@ const Testimonials = () => {
                       </Typography>
                       <Typography
                         variant="h1"
-                        data-aos="flip-right"
-                        data-aos-delay="400"
                         color="primary"
-                        className="xl:max-w-[50%]"
-
                         sx={{
                           fontSize: { xs: 9, sm: 18 },
                           fontWeight: 700,
@@ -141,7 +128,6 @@ const Testimonials = () => {
                         {slide.title}
                       </Typography>
                     </Box>
-                    {/* صورة الخلفية */}
                     <Box component={"div"}>
                       <img
                         src={slide.image}
@@ -175,8 +161,9 @@ const Testimonials = () => {
               </button>
             </div>
           </Swiper>
+          {/* الـ Pagination متمركز داخل الـ Container */}
+          <div className="custom-pagination absolute bottom-0 left-0 right-0 flex justify-center items-center !mt-5 md:!mt-10"></div>
         </Box>
-        <div className="custom-pagination !mx-auto !translate-x-12 !mt-5 md:!mt-10"></div>
       </Container>
     </div>
   );
