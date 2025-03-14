@@ -103,7 +103,7 @@ const Testimonials = () => {
                         color="text.secondary"
                         sx={{
                           fontSize: { xs: 12, sm: 14 },
-                          fontWeight: 400,
+                          fontWeight: 300,
                           marginBottom: { xs: 0, sm: 2 },
                           textAlign: { xs: "center", md: "left" },
                           width: "100%",
@@ -144,7 +144,6 @@ const Testimonials = () => {
                     {/* صورة الخلفية */}
                     <Box component={"div"}>
                       <img
-                        className="!object-cover"
                         src={slide.image}
                         alt=""
                         style={{
@@ -177,7 +176,7 @@ const Testimonials = () => {
             </div>
           </Swiper>
         </Box>
-        <div className="custom-pagination !mx-auto !mt-10"></div>
+        <div className="custom-pagination !mx-auto !translate-x-12 !mt-5 md:!mt-10"></div>
       </Container>
     </div>
   );
