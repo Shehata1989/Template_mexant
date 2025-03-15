@@ -51,7 +51,7 @@ const FormsCalculator = () => {
 
   return (
     <Box className="forms-calculator !bg-[url(./assets/images/calculator-bg.jpg)] !bg-no-repeat !bg-cover !mt-15 md:!mt-30 max-h-[600px]">
-      <Container maxWidth="xl" fixed className="!max-h-[600px] !p-5">
+      <Container maxWidth="xl" fixed className="!max-h-[600px]">
         <Grid
           container
           justifyContent={{ xs: "center", md: "center" }}
@@ -62,9 +62,8 @@ const FormsCalculator = () => {
             <div
               style={{
                 width: "100%",
-                maxWidth: "400px",
-                height: "auto",
-                objectFit: "contain",
+                height: "100%",
+                objectFit: "cover",
               }}
             >
               <img
