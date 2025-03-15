@@ -78,7 +78,7 @@ const Testimonials = () => {
               type: "bullets",
             }}
             autoplay={{
-              delay: 3000,
+              delay: 4000,
               disableOnInteraction: true,
             }}
             onSlideChange={handleSlideChange}

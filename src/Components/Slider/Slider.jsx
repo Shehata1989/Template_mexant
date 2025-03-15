@@ -66,7 +66,7 @@ const SliderApp = () => {
         }}
         pagination={{ clickable: true, dynamicBullets: true }}
         autoplay={{
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: true,
         }}
         onSlideChange={handleSlideChange}
