@@ -1,7 +1,33 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Btn from "../Components/Btn";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const SimpleCta = () => {
+
+
+    useEffect(() => {
+      const initAOS = () => {
+        AOS.init({
+          duration: 500,
+          once: false, // السماح بإعادة التأثيرات عند تغيير السلايد
+          easing: "ease-in-out",
+          mirror: false,
+          offset: 50,
+        });
+      };
+  
+      initAOS();
+  
+      return () => {
+        setTimeout(() => {
+          AOS.refresh(); // تحديث التأثيرات باستمرار
+        }, 100);
+      };
+    }, []);
+
+
   return (
     <div className="simple-cta !bg-[url(./assets/images/cta-bg.jpg)] !bg-no-repeat !bg-cover !mt-15 md:!mt-30 !py-10 md:!py-20">
       <Container maxWidth="xl" fixed>

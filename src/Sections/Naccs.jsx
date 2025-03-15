@@ -16,19 +16,45 @@ import {
 import Grid from "@mui/material/Grid2";
 import Btn from "../Components/Btn";
 import { NaccsData } from "../SliderData/naccsData";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Naccs = () => {
   const [tabIndex, setTabIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out",
+      once: true, // تشغيل التأثير مرة واحدة فقط لكل عنصر
+      mirror: false,
+      offset: 50,
+    });
+
+    AOS.refresh(); // تحديث التأثيرات عند تحميل الصفحة أو تغيير التاب
+  }, [tabIndex]);
+
 
   const styleTap = { color: "text.secondary", fontSize: { sx: 12, md: 16 } };
 
   return (
     <Container maxWidth="xl" fixed className="naccs !mt-15 md:!mt-30">
-      <Typography variant="h6" sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }} className="title !mb-2 !uppercase !text-center" color="secondary">
-      About Us
+      <Typography
+        variant="h6"
+        sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }}
+        className="title !mb-2 !uppercase !text-center"
+        color="secondary"
+      >
+        About Us
       </Typography>
-      <Typography variant="h6" sx={{ fontSize: { xs: 20, sm: 36 }, fontWeight: 700 }} className="title !mb-10 !text-center" color="text.secondary">
-      Know Us Better
+      <Typography
+        variant="h6"
+        sx={{ fontSize: { xs: 20, sm: 36 }, fontWeight: 700 }}
+        className="title !mb-10 !text-center"
+        color="text.secondary"
+      >
+        Know Us Better
       </Typography>
       <Grid container spacing={8}>
         {/* ✅ قسم التابز */}
@@ -53,6 +79,8 @@ const Naccs = () => {
           </Tabs>
 
           <TableContainer
+          key={tabIndex}
+          data-aos="zoom-in-up"
             sx={{ boxShadow: 3, borderRadius: "16px" }}
             component={Paper}
           >
@@ -88,7 +116,7 @@ const Naccs = () => {
         </Grid>
 
         {/* ✅ قسم النصوص */}
-        <Grid size={{ xs: 12, md: 4 }} className="!translate-y-2" >
+        <Grid size={{ xs: 12, md: 4 }} className="!translate-y-2">
           <Box
             sx={{
               textAlign: {
@@ -112,14 +140,11 @@ const Naccs = () => {
               NOT allowed to redistribute the template ZIP file on any other
               template websites.
             </Typography>
-            <Typography
-              variant="body1"
-              sx={{ fontWeight: 700, fontSize: 14 }}
-            >
+            <Typography variant="body1" sx={{ fontWeight: 700, fontSize: 14 }}>
               Thank you for downloading and using our templates. Please tell
               your friends about our website.
             </Typography>
-            <Box sx={{ mt: { xs: 6, md: "auto" }, mb: 1}}>
+            <Box sx={{ mt: { xs: 6, md: "auto" }, mb: 1 }}>
               <Btn
                 info={{
                   variant: "contained",
