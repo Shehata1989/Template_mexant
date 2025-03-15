@@ -9,6 +9,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
 import "./Testimonials.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
   const [isFirst, setIsFirst] = useState(true);
@@ -19,9 +22,27 @@ const Testimonials = () => {
     setIsLast(swiper.isEnd);
   }, []);
 
+  useEffect(() => {
+    const initAOS = () => {
+      AOS.init({
+        easing: "ease-in-out",
+        mirror: false,
+        offset: 50,
+      });
+    };
+
+    initAOS();
+
+    return () => {
+      setTimeout(() => {
+        AOS.refresh(); // تحديث التأثيرات باستمرار
+      }, 100);
+    };
+  }, []);
+
   return (
     <div className="testimonials !mt-15 md:!mt-30 !mb-10 xl:!mb-30 !overflow-hidden">
-      <Container  className="">
+      <Container className="">
         <Typography
           variant="h6"
           sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }}
@@ -93,6 +114,8 @@ const Testimonials = () => {
                         {slide?.icon}
                       </Typography>
                       <Typography
+                        data-aos="flip-left"
+                        data-aos-delay="300"
                         variant="h1"
                         color="text.secondary"
                         sx={{
@@ -106,6 +129,8 @@ const Testimonials = () => {
                         {slide.Description}
                       </Typography>
                       <Typography
+                        data-aos="flip-up"
+                        data-aos-delay="500"
                         variant="h1"
                         color="text.secondary"
                         sx={{
@@ -117,6 +142,8 @@ const Testimonials = () => {
                         {slide.name}
                       </Typography>
                       <Typography
+                        data-aos="flip-up"
+                        data-aos-delay="800"
                         variant="h1"
                         color="primary"
                         sx={{

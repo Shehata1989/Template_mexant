@@ -12,6 +12,7 @@ import Naccs from "./Sections/Naccs";
 import FormsCalculator from "./Sections/FormsCalculator";
 import Testimonials from "./Sections/Testimonials";
 import Partners from "./Sections/Partners";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const theme = createTheme({
@@ -23,9 +24,10 @@ function App() {
         main: "#ff511a", // اللون الثانوي (وردي)
       },
       bgColor: {
-        primary: "#43ba7f", // لون الخلفية الافتراضي
-        secondary: "#ff511a", // لون الخلفية الثانوي
-        third: "#212741", // لون الخلفية الثانوي
+        primary: "#43ba7f",
+        secondary: "#ff511a",
+        third: "#212741",
+        fourth: "#181d30",
       },
       text: {
         primary: "#fff", // لون النص الأساسي
@@ -66,7 +68,7 @@ function App() {
           <FormsCalculator />
           <Testimonials />
           <Partners />
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </ThemeProvider>
     </>
