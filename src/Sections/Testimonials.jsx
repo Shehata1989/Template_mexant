@@ -165,7 +165,7 @@ const Testimonials = () => {
                         src={slide.image}
                         alt=""
                         style={{
-                          width: "100vw",
+                          width: "300px",
                           height: "100%",
                           objectFit: "cover",
                         }}
