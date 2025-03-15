@@ -93,6 +93,11 @@ const Testimonials = () => {
                   }}
                 >
                   <Stack
+                    sx={{
+                      boxShadow: 3,
+                      borderRadius: "16px",
+                      paddingLeft: { xs: 0, md: 4 },
+                    }}
                     direction={{ xs: "column", md: "row" }}
                     justifyContent={"space-between"}
                     alignItems={"center"}
@@ -160,7 +165,7 @@ const Testimonials = () => {
                         src={slide.image}
                         alt=""
                         style={{
-                          width: "100%",
+                          width: "100vw",
                           height: "100%",
                           objectFit: "cover",
                         }}
