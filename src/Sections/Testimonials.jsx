@@ -20,8 +20,8 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div className="testimonials !mt-15 md:!mt-30">
-      <Container className="!h-[550px] relative">
+    <div className="testimonials !mt-15 md:!mt-30 !mb-10 xl:!mb-30 !overflow-hidden">
+      <Container  className="">
         <Typography
           variant="h6"
           sx={{ fontSize: { xs: 12, sm: 15 }, fontWeight: 900 }}

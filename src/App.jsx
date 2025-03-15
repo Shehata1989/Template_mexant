@@ -11,6 +11,7 @@ import SimpleCta from "./Sections/SimpleCta";
 import Naccs from "./Sections/Naccs";
 import FormsCalculator from "./Sections/FormsCalculator";
 import Testimonials from "./Sections/Testimonials";
+import Partners from "./Sections/Partners";
 
 function App() {
   const theme = createTheme({
@@ -24,6 +25,7 @@ function App() {
       bgColor: {
         primary: "#43ba7f", // لون الخلفية الافتراضي
         secondary: "#ff511a", // لون الخلفية الثانوي
+        third: "#212741", // لون الخلفية الثانوي
       },
       text: {
         primary: "#fff", // لون النص الأساسي
@@ -63,6 +65,7 @@ function App() {
           <Naccs />
           <FormsCalculator />
           <Testimonials />
+          <Partners />
           {/* <Footer /> */}
         </Router>
       </ThemeProvider>
