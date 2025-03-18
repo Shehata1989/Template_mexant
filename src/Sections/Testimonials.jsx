@@ -40,6 +40,7 @@ const Testimonials = () => {
     };
   }, []);
 
+
   return (
     <div className="testimonials !mt-15 md:!mt-30 !mb-10 xl:!mb-30 !overflow-hidden">
       <Container maxWidth="md" fixed className="">
@@ -76,8 +77,6 @@ const Testimonials = () => {
             pagination={{
               clickable: true,
               dynamicBullets: true,
-              el: ".custom-pagination",
-              type: "bullets",
             }}
             autoplay={{
               delay: 4000,
@@ -87,7 +86,7 @@ const Testimonials = () => {
           >
             {TestimonialsData.map((slide, index) => (
               <SwiperSlide key={`${index}-${new Date().getTime()}`}>
-                <Container maxWidth="md" fixed>
+                <Container maxWidth="md" fixed sx={{px: { xs: 0, md: 8 }}}>
                   <Stack
                     className="slider-content"
                     sx={{
@@ -109,7 +108,6 @@ const Testimonials = () => {
                         color="primary"
                         sx={{
                           fontSize: { xs: 45, sm: 90 },
-                          marginBottom: { xs: 0, sm: 4 },
                         }}
                       >
                         {slide?.icon}
@@ -122,7 +120,6 @@ const Testimonials = () => {
                         sx={{
                           fontSize: { xs: 12, sm: 14 },
                           fontWeight: 300,
-                          marginBottom: { xs: 0, sm: 2 },
                           textAlign: { xs: "center", md: "left" },
                           px: { xs: 2, md: 0 },
                         }}
@@ -186,15 +183,13 @@ const Testimonials = () => {
               <ChevronLeft />
             </button>
             <button
-              className={`custom-next w-[40px] h-[40px] absolute !z-1000 top-1/2 right-0 -translate-y-1/2 cursor-pointer rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
+              className={`custom-next w-[40px] h-[40px] absolute !z-1000 top-[42%] right-0 -translate-y-1/2 cursor-pointer rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
                 isLast ? "opacity-40 pointer-events-none" : "opacity-100"
               }`}
             >
               <ChevronRight />
             </button>
           </div>
-          {/* الـ Pagination متمركز داخل الـ Container */}
-          <div className="custom-pagination absolute bottom-0 left-0 right-0 flex justify-center items-center !mt-5 md:!mt-10"></div>
         </Box>
       </Container>
     </div>

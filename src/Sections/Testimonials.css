@@ -1,16 +1,8 @@
 .testimonials-swiper {
-  position: relative;
   padding-bottom: 4rem; /* مساحة كافية للـ Pagination */
 }
 
-.custom-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.custom-pagination .swiper-pagination-bullet {
+.testimonials-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: #ff511a;
@@ -18,18 +10,18 @@
   transition: opacity 0.3s ease;
 }
 
-.custom-pagination .swiper-pagination-bullet-active {
+.testimonials-swiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+.testimonials-swiper .swiper-pagination {
+  bottom: 0px !important;
+}
+
 
 /* تحسين التوافق مع الشاشات الصغيرة */
 @media (max-width: 600px) {
   .testimonials-swiper {
     padding-bottom: 3rem;
-  }
-
-  .custom-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
   }
 }

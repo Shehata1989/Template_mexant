@@ -55,9 +55,9 @@ const SliderApp = () => {
   return (
     <div>
       <Swiper
-        className="swiper bg-[#222] !w-full !min-h-screen !overflow-hidden"
+        className="hero-swiper bg-[#222] !w-full !min-h-screen !overflow-hidden"
         modules={[Navigation, Pagination, Autoplay]}
-        grabCursor={true}
+        grabCursor={false}
         spaceBetween={0}
         slidesPerView={1}
         navigation={{
@@ -157,15 +157,15 @@ const SliderApp = () => {
       {/* أزرار التنقل */}
       <div className="max-[900px]:hidden">
         <button
-          className={`custom-prev w-[40px] h-[40px] absolute z-10 top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
-            isFirst ? "opacity-40 pointer-events-none" : "opacity-100"
+          className={`custom-prev w-[40px] h-[40px] absolute z-10 top-1/2 left-4 -translate-y-1/2 rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
+            isFirst ? "opacity-40" : "opacity-100"
           }`}
         >
           <ChevronLeft />
         </button>
         <button
-          className={`custom-next w-[40px] h-[40px] absolute z-10 top-1/2 right-4  -translate-y-1/2 cursor-pointer rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
-            isLast ? "opacity-40 pointer-events-none" : "opacity-100"
+          className={`custom-next w-[40px] h-[40px] absolute z-10 top-1/2 right-4  -translate-y-1/2 rounded-full bg-[#ff511a] hover:opacity-80 duration-300 ${
+            isLast ? "opacity-40" : "opacity-100"
           }`}
         >
           <ChevronRight />
